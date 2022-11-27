@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="Added">
-      <change afterPath="$PROJECT_DIR$/src/dstructs/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dstructs/HashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dstructs/DNASequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dstructs/HashTableHC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dstructs/HashTableHF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dstructs/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDSALGMC02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CCDSALGMC02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +57,18 @@
       <option name="presentableId" value="Default" />
       <updated>1669538716137</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added src and packages">
+      <created>1669540142049</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669540142049</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added src and packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added src and packages" />
   </component>
 </project>

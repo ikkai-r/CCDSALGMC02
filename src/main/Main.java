@@ -1,5 +1,8 @@
 package main;
 
+import dstructs.DNASequence;
+import dstructs.HashTableHC;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,20 +12,21 @@ public class Main {
 
         String dnaString;
         int sizeOfSubstrings;
+        DNASequence dnaSequence;
 
         Scanner input = new Scanner(System.in);
 
         //Get input of DNA String and size k of substrings,
         System.out.println("Input DNA sequence with alphabet {a, c, g, t}:");
-        dnaString = input.nextLine();
+        dnaString = "taccaccaccatag";
 
         System.out.println("Input size of substrings for k-mer distribution:");
-        sizeOfSubstrings = input.nextInt();
+        sizeOfSubstrings = 6;
 
-        //compute k-mer distribution using HashTable
+        dnaSequence = new DNASequence(dnaString, sizeOfSubstrings);
 
+        dnaSequence.separateDNASequence();
 
-        //compute k-mer distribution using Binary Search Tree
 
     }
 
