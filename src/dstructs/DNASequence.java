@@ -4,13 +4,13 @@ public class DNASequence {
     private String dnaString;
     private int sizeOfSubstrings;
 
-    HashTableHC htHC = new HashTableHC();
-    HashTableHF htHF = new HashTableHF();
-
     public DNASequence(String dnaString, int sizeOfSubstrings) {
         this.dnaString = dnaString;
         this.sizeOfSubstrings = sizeOfSubstrings;
     }
+
+    HashTableHC htHC = new HashTableHC();
+    HashTableHF htHF = new HashTableHF(this.sizeOfSubstrings);
 
     //TODO: Make function to separate string into k-length substrings
 
@@ -46,15 +46,13 @@ public class DNASequence {
 
     public void printComputedKMerDist() {
 
-        HashTableHC hashHC = new HashTableHC();
-        HashTableHF hashHF = new HashTableHF();
         BinarySearchTree bst = new BinarySearchTree();
 
         //for hashtable
         //print first implementation
-        hashHC.printKMerDistribution();
+        htHC.printKMerDistribution();
         //print second implementation
-        hashHF.printKMerDistribution();
+        htHF.printKMerDistribution();
 
         //print bst
         bst.printKMerDistribution();
