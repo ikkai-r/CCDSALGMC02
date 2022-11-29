@@ -1,7 +1,6 @@
 package main;
 
 import dstructs.DNASequence;
-import dstructs.HashTableHC;
 
 import java.util.Scanner;
 

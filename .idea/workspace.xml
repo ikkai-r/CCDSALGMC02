@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="">
+    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="Revised all hashtables and added hashing functions.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/codec/CharEncoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hashfuncs/CityHash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hashfuncs/MurmurHash2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hashts/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hashts/HashTableCityH.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dstructs/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/DNASequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTableHC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/HashTableHC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTableHF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/HashTableHF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTableHC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/HashTableHF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTableMurm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -34,12 +41,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/NEIL/IdeaProjects/CCDSALGMC02"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\NEIL\IdeaProjects\CCDSALGMC02\src" />
@@ -68,12 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669552036433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed HashTable, made array for HashTable own function and retained HC, HT implementation.">
+      <created>1669604881230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669604881230</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added src and packages" />
     <MESSAGE value="Added BST, HT, and DNAseq." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BST, HT, and DNAseq." />
+    <MESSAGE value="Removed HashTable, made array for HashTable own function and retained HC, HT implementation." />
+    <MESSAGE value="Revised all hashtables and added hashing functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revised all hashtables and added hashing functions." />
   </component>
 </project>
