@@ -31,6 +31,7 @@ public class DNASequence {
         while (length >= sizeOfSubstrings) {
 
             substring = dnaStringHT.substring(0, sizeOfSubstrings);
+            System.out.println("from here: " + substring);
             found = htHC.searchElement(substring);
 
             if (found) {
@@ -38,7 +39,7 @@ public class DNASequence {
                 htHC.updateElement(substring);
             } else {
                 //add element
-                htHC.addElement(substring, 1);
+                htHC.addElement(substring);
             }
 
             dnaStringHT = dnaStringHT.substring(1);

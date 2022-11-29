@@ -23,8 +23,8 @@ public class HashTableMurm implements HashTable {
         return Math.floorMod(MurmurHash2.hash32(substring), sizeOfSubStrings);
     }
 
-    public void addElement(String keySubstring, int value) {
-        hashTableHM[getHashIndex(keySubstring)] = value;
+    public void addElement(String keySubstring) {
+        hashTableHM[getHashIndex(keySubstring)] = 1;
     }
 
     public boolean searchElement(String keySubstring) {
@@ -33,7 +33,6 @@ public class HashTableMurm implements HashTable {
 
     public void updateElement(String keySubstring) {
         hashTableHM[getHashIndex(keySubstring)]++;
-        System.out.println("updated");
     }
 
     public void printKMerDistribution() {
