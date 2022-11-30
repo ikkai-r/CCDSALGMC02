@@ -2,23 +2,15 @@ package hashts;
 
 import hashfuncs.CityHash;
 
-public class HashTableCityH implements HashTable {
-    private static int sizeofSubStrings;
+import java.util.LinkedList;
 
-    //TODO: Make linked list
-    private int[] hashtableCH;
+public class HashTableCityH extends HashTables implements HashTable {
     private int collFreq = 0;
 
     public HashTableCityH(int sizeofSubStrings) {
-        HashTableCityH.sizeofSubStrings = sizeofSubStrings;
-        this.hashtableCH = new int[sizeofSubStrings];
-        setHashtableCH();
-    }
-
-    public void setHashtableCH() {
-        for (int index = 0; index < sizeofSubStrings; index++) {
-            hashtableCH[index] = 0;
-        }
+        HashTables.sizeofSubStrings = sizeofSubStrings;
+        super.hashTable = new LinkedList[sizeofSubStrings+1];
+        super.setHashTable();
     }
 
     public static byte[] getSBytes(String s) {
@@ -27,48 +19,49 @@ public class HashTableCityH implements HashTable {
 
     //hashing function
     public static int getHashIndex(String substring) {
-        return Math.floorMod(CityHash.cityHash64(getSBytes(substring), 0,substring.length()), sizeofSubStrings);
-    }
-
-    //TODO: Fix collisionResolution. meron atang smth wrong with the add element and update element
-    //dapat macheck din if tama iuupdate
-    public void addElement(String keySubstring) {
-        System.out.println(searchElement(keySubstring));
-        if(searchElement(keySubstring)) {
-            collisionResolution(keySubstring);
-        } else {
-            hashtableCH[getHashIndex(keySubstring)] = 1;
-            System.out.println(keySubstring);
-        }
-    }
-
-    public boolean searchElement(String keySubstring) {
-        return hashtableCH[getHashIndex(keySubstring)] > 0;
-    }
-
-    public void updateElement(String keySubstring) {
-        hashtableCH[getHashIndex(keySubstring)]++;
+        return Math.floorMod(CityHash.cityHash64(getSBytes(substring), 0,substring.length()), HashTables.sizeofSubStrings+1);
     }
 
     public void collisionResolution(String keySubstring) {
-        int newIndex;
-        int hashIndex = getHashIndex(keySubstring);
+        addElement(keySubstring);
+        collFreq++;
+    }
 
-        for (int index = 0; index < sizeofSubStrings; index++) {
-            newIndex = (hashIndex+((int)Math.pow(index, 2)))%sizeofSubStrings;
-            if (!searchElement(keySubstring)) {
-                hashtableCH[newIndex] = 1;
-                System.out.println("h " + keySubstring);
-                break;
-            } else {
-                collFreq++;
+    public boolean needCollisionResolution(String keySubstring) {
+        boolean needCR = true;
+
+        for (int index = 0; index < super.hashTable[getHashIndex(keySubstring)].size(); index++) {
+            if (super.hashTable[getHashIndex(keySubstring)].get(index).equals(keySubstring)) {
+                needCR = false;
+            }
+        }
+
+        return needCR;
+    }
+
+    public void addElement(String keySubstring) {
+        super.hashTable[getHashIndex(keySubstring)].add(keySubstring);
+        super.hashTable[getHashIndex(keySubstring)].add(1);
+    }
+
+    public boolean searchElement(String keySubstring) {
+        return !super.hashTable[getHashIndex(keySubstring)].isEmpty();
+    }
+
+    public void updateElement(String keySubstring) {
+        int newInt;
+
+        for (int index = 0; index < super.hashTable[getHashIndex(keySubstring)].size(); index+=2) {
+            if (super.hashTable[getHashIndex(keySubstring)].get(index).equals(keySubstring)) {
+                newInt = (int) super.hashTable[getHashIndex(keySubstring)].get(index+1);
+                super.hashTable[getHashIndex(keySubstring)].set(index+1, newInt + 1);
             }
         }
     }
 
     public void printKMerDistribution() {
-        for (int c: hashtableCH) {
-            System.out.println(c);
+        for (int index = 0; index <= HashTables.sizeofSubStrings; index++) {
+            System.out.println(super.hashTable[index]);
         }
         System.out.println("coll freq: " + collFreq);
     }
