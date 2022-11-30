@@ -6,7 +6,6 @@ import hashts.HashTableCityH;
 public class DNASequence {
     private String dnaString;
     private int sizeOfSubstrings;
-    private String[] dnaSubstrings;
     HashTableCityH htHC;
     HashTableMurm htHF;
     BinarySearchTree bst;

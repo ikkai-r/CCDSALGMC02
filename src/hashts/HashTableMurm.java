@@ -58,7 +58,7 @@ public class HashTableMurm extends HashTables implements HashTable {
         for (int index = 0; index <= HashTables.sizeofSubStrings; index++) {
             System.out.println(super.hashTable[index]);
         }
-        System.out.println("coll freq: " + collFreq);
+        System.out.println("Collision frequency for MurmurHash2: " + collFreq);
     }
 
 }

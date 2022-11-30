@@ -9,7 +9,6 @@ public class HashTables {
     public void setHashTable() {
         for (int index = 0; index <= sizeofSubStrings; index++) {
             this.hashTable[index] = new LinkedList<>();
-            System.out.println(hashTable[index]);
         }
     }
 
