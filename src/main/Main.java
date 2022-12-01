@@ -1,6 +1,6 @@
 package main;
 
-import dstructs.DNASequence;
+import dnaseq.DNASequence;
 
 import java.util.Scanner;
 

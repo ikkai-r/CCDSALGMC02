@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="Finished hashtables implementation. BST left and formatting of printing the kmer distribution.">
+    <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codec/CharEncoding.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dstructs/DNASequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTableCityH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTableCityH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTableMurm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTableMurm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dstructs/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669771121738</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finished hashtables implementation. BST left and formatting of printing the kmer distribution.">
+      <created>1669771259410</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669771259410</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
