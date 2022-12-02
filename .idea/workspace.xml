@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dstructs/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669771259410</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="BST search left &amp; formatting printing kmers.">
+      <created>1669905910979</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669905910979</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,6 +121,7 @@
     <MESSAGE value="Revised all hashtables and added hashing functions." />
     <MESSAGE value="Will fix collision resolution and update element, maybe will use chaining instead of quadratic probing. Estimated time of finish is tomorrow for the HashTable and the next day for the BST." />
     <MESSAGE value="Finished hashtables implementation. BST left and formatting of printing the kmer distribution." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished hashtables implementation. BST left and formatting of printing the kmer distribution." />
+    <MESSAGE value="BST search left &amp; formatting printing kmers." />
+    <option name="LAST_COMMIT_MESSAGE" value="BST search left &amp; formatting printing kmers." />
   </component>
 </project>

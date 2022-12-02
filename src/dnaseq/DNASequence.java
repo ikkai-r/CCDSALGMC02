@@ -68,7 +68,6 @@ public class DNASequence {
 //
 //            dnaStringHT = dnaStringHT.substring(1);
 
-
             if (bst.searchCall(substring)) {
                 //update value
                 bst.update(substring);

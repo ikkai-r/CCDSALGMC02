@@ -18,34 +18,43 @@ public class BinarySearchTree {
         this.root = null;
     }
 
-    //TODO: tinatamad pa ako kumpletuhin, pero essentialli,
-    //eto na yon HAHAHAHA, yung search nalang talaga
     public boolean searchCall(String key) {
-
-        root = search(this.root, key);
-
-        return root != null;
+        return search(root, key);
     }
 
-    public Node search(Node current, String key) {
+    public boolean search(Node current, String key) {
+        if (current == null) {
+            return false;
+        } else if (current.getKey().equals(key)) {
+            return true;
+        } else if(current.getKey().compareTo(key) < 0) {
+            return search(current.getLeft(), key);
+        } else if(current.getKey().compareTo(key) > 0) {
+            return search(current.getRight(), key);
+        }
+
+        return false;
+    }
+    public Node searchForKey(Node current, String key) {
         if (current == null) {
             return null;
         } else if (current.getKey().equals(key)) {
             return current;
         } else if(current.getKey().compareTo(key) < 0) {
-            return search(current.getLeft(), key);
+            return searchForKey(current.getLeft(), key);
+        } else if(current.getKey().compareTo(key) > 0) {
+            return searchForKey(current.getRight(), key);
         }
 
-        return search(current.getRight(), key);
+        return null;
     }
-
     public void update(String key) {
-        root = search(this.root, key);
-        root.setRecord(root.getRecord()+1);
+        Node current = searchForKey(this.root, key);
+        current.setRecord(current.getRecord()+1);
     }
 
     public void insertCall(String key) {
-        this.root = insert(this.root, key);
+        root = insert(root, key);
     }
 
     public Node insert(Node current, String key) {
