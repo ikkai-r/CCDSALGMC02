@@ -60,11 +60,8 @@ public class HashTableCityH extends HashTables implements HashTable {
     }
 
     public void printKMerDistribution(int kNum) {
-        System.out.println(kNum + "-mer\t no. of occurrences");
-        for (int index = 0; index <= HashTables.sizeofSubStrings; index++) {
-            System.out.println(super.hashTable[index]);
-        }
-        System.out.println("Collision frequency for CityHash: " + collFreq);
+        super.printKMerDistribution(kNum);
+        System.out.println("\nCollision frequency for CityHash: " + collFreq);
     }
 
 }

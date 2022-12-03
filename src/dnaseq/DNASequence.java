@@ -53,6 +53,7 @@ public class DNASequence {
 
     public void hashTableDist(String substring) {
         boolean found;
+
         found = htHC.searchElement(substring);
         if (found) {
             //update hashtable

@@ -93,7 +93,7 @@ public class BinarySearchTree {
         if (root == null) {
             return;
         }
-        System.out.println(root.getKey() + "\t " + root.getRecord());
+        System.out.println(root.getKey() + "\t\t\t" + root.getRecord());
         preorder(root.getLeft());
         preorder(root.getRight());
 
