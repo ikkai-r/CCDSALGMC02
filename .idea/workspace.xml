@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a2954fd-e85d-4012-9421-497f9368b7d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dnaseq/DNASequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTableCityH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTableCityH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTableMurm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTableMurm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hashts/HashTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hashts/HashTables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bst/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bst/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670066676744</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Formatting DONE. Comments needed.">
+      <created>1670068685628</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670068685628</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +144,7 @@
     <MESSAGE value="BST search left &amp; formatting printing kmers." />
     <MESSAGE value="BST finish. Print formatting needed." />
     <MESSAGE value="Print formatting WIP." />
-    <option name="LAST_COMMIT_MESSAGE" value="Print formatting WIP." />
+    <MESSAGE value="Formatting DONE. Comments needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting DONE. Comments needed." />
   </component>
 </project>

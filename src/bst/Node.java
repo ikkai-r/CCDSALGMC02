@@ -16,13 +16,6 @@ public class Node {
         this.right = null;
     }
 
-    public Node() {
-        this.key = null;
-        this.record = -1;
-        this.left = null;
-        this.right = null;
-    }
-
     public String getKey() {
         return key;
     }
