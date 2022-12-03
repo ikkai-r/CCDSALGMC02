@@ -35,21 +35,21 @@ public class BinarySearchTree {
 
         return false;
     }
-    public Node searchForKey(Node current, String key) {
+    public Node getSearchNode(Node current, String key) {
         if (current == null) {
             return null;
         } else if (current.getKey().equals(key)) {
             return current;
         } else if(current.getKey().compareTo(key) < 0) {
-            return searchForKey(current.getLeft(), key);
+            return getSearchNode(current.getLeft(), key);
         } else if(current.getKey().compareTo(key) > 0) {
-            return searchForKey(current.getRight(), key);
+            return getSearchNode(current.getRight(), key);
         }
 
         return null;
     }
     public void update(String key) {
-        Node current = searchForKey(this.root, key);
+        Node current = getSearchNode(this.root, key);
         current.setRecord(current.getRecord()+1);
     }
 
@@ -84,7 +84,8 @@ public class BinarySearchTree {
         this.root = null;
     }
 
-    public void preorder() {
+    public void printKMerDistribution(int kNum) {
+        System.out.println(kNum + "-mer\t no. of occurrences");
         preorder(root);
     }
 
@@ -92,13 +93,10 @@ public class BinarySearchTree {
         if (root == null) {
             return;
         }
-        System.out.println(root.getKey() + " " + root.getRecord());
+        System.out.println(root.getKey() + "\t " + root.getRecord());
         preorder(root.getLeft());
         preorder(root.getRight());
 
     }
 
-    public void printKMerDistribution() {
-
-    }
 }

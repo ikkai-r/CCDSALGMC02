@@ -11,10 +11,4 @@ public class HashTables {
             this.hashTable[index] = new LinkedList<>();
         }
     }
-
-    public void printKMerDistribution() {
-        for (int index = 0; index <= sizeofSubStrings; index++) {
-            System.out.println(hashTable[index]);
-        }
-    }
 }

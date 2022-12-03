@@ -7,7 +7,7 @@ public interface HashTable {
     public boolean needCollisionResolution(String keySubstring);
     public void collisionResolution(String keySubstring);
     public void updateElement(String keySubString);
-    public void printKMerDistribution();
+    public void printKMerDistribution(int kNum);
 
 
 

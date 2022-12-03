@@ -17,10 +17,12 @@ public class Main {
 
         //Get input of DNA String and size k of substrings,
         System.out.println("Input DNA sequence with alphabet {a, c, g, t}:");
+        //dnaString = input.nextLine();
         dnaString = "taccaccaccatag";
 
         System.out.println("Input size of substrings for k-mer distribution:");
         sizeOfSubstrings = 6;
+        //sizeOfSubstrings = input.nextInt();
 
         dnaSequence = new DNASequence(dnaString, sizeOfSubstrings);
 
