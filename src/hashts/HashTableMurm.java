@@ -18,11 +18,21 @@ public class HashTableMurm extends HashTables implements HashTable {
         return Math.floorMod(MurmurHash2.hash64(substring), HashTables.sizeofSubStrings);
     }
 
+    /**
+     * Implements the chaining technique, adding the element at the end of the linked list.
+     * @param keySubstring      substring to be added.
+     */
     public void collisionResolution(String keySubstring) {
         addElement(keySubstring);
         collFreq++;
     }
 
+    /**
+     * Checks if string collides or not.
+     * @param keySubstring      substring to be checked.
+     * @return                  true, if it is a new substring.
+     *                          false, if it is an existing substring
+     */
     public boolean needCollisionResolution(String keySubstring) {
         boolean needCR = true;
 

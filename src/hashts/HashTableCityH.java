@@ -14,7 +14,7 @@ public class HashTableCityH extends HashTables implements HashTable {
     }
 
     /**
-     * Gets how many bytes a certain string has.
+     * Converts string s to bytes.
      * @param s     string to be observed
      * @return      bytes of the string s.
      */
@@ -27,11 +27,21 @@ public class HashTableCityH extends HashTables implements HashTable {
         return Math.floorMod(CityHash.cityHash64(getSBytes(substring), 0,substring.length()), hashts.HashTables.sizeofSubStrings+1);
     }
 
+    /**
+     * Implements the chaining technique, adding the element at the end of the linked list.
+     * @param keySubstring      substring to be added.
+     */
     public void collisionResolution(String keySubstring) {
         addElement(keySubstring);
         collFreq++;
     }
 
+    /**
+     * Checks if string collides or not.
+     * @param keySubstring      substring to be checked.
+     * @return                  true, if it is a new substring.
+     *                          false, if it is an existing substring
+     */
     public boolean needCollisionResolution(String keySubstring) {
         boolean needCR = true;
 
