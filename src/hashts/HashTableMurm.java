@@ -13,6 +13,7 @@ public class HashTableMurm extends HashTables implements HashTable {
         super.setHashTable();
     }
 
+    // hashing function
     public static int getHashIndex(String substring) {
         return Math.floorMod(MurmurHash2.hash64(substring), HashTables.sizeofSubStrings);
     }
@@ -34,11 +35,20 @@ public class HashTableMurm extends HashTables implements HashTable {
         return needCR;
     }
 
+    /**
+     * Inserts the substring and its value in the list at the corresponding hashed index.
+     * @param keySubstring      substring to be added.
+     */
     public void addElement(String keySubstring) {
         super.hashTable[getHashIndex(keySubstring)].add(keySubstring);
         super.hashTable[getHashIndex(keySubstring)].add(1);
     }
 
+    /**
+     * Returns if there is no elements present in the list at the corresponding hashed index.
+     * @param keySubstring      substring to be searched
+     * @return                  returns false if substring is not present in the hash table.
+     */
     public boolean searchElement(String keySubstring) {
         return !super.hashTable[getHashIndex(keySubstring)].isEmpty();
     }
@@ -54,6 +64,10 @@ public class HashTableMurm extends HashTables implements HashTable {
         }
     }
 
+    /**
+     * Prints KMer Distribution along as its collision frequency.
+     * @param kNum      KNumber
+     */
     public void printKMerDistribution(int kNum) {
         super.printKMerDistribution(kNum);
         System.out.println("\nCollision frequency for MurmurHash2: " + collFreq);

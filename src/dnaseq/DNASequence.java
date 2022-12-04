@@ -19,6 +19,11 @@ public class DNASequence {
         this.bst = new BinarySearchTree();
     }
 
+    /**
+     * Does the whole KMer process by firstly separating the substrings,
+     * finding their frequencies,
+     * and finding their collision frequencies
+     */
     public void separateDNASequence() {
 
         String dnaStringHT = dnaString;
@@ -27,8 +32,9 @@ public class DNASequence {
         int length = dnaString.length();
         String substring;
 
-        bst.create();
+        bst.create(); // produces an empty BST
 
+        // allocates each substring in a Hash Table and BST
         while (length >= sizeOfSubstrings) {
             substring = dnaStringBST.substring(0, sizeOfSubstrings);
             substring = dnaStringHT.substring(0, sizeOfSubstrings);
@@ -44,13 +50,17 @@ public class DNASequence {
         }
 
 
-        printComputedKMerDist();
+        printComputedKMerDist(); // prints the KMer Distribution of the Hash Table and BST
         bst.destroy();
 
 
 
     }
 
+    /**
+     * Adds the substring into the hashtable.
+     * @param substring     substring to be added.
+     */
     public void hashTableDist(String substring) {
         boolean found;
 
@@ -83,6 +93,10 @@ public class DNASequence {
 
     }
 
+    /**
+     * Adds the substring in the BST.
+     * @param substring     substring to be added.
+     */
     public void bstDist(String substring) {
         if (bst.searchCall(substring)) {
             //update value
@@ -93,6 +107,9 @@ public class DNASequence {
         }
     }
 
+    /**
+     * Prints the KMer Distribution of the Hash tables (using CityHash and MurMurHash2) and BST
+     */
     public void printComputedKMerDist() {
 
         //for hashtable

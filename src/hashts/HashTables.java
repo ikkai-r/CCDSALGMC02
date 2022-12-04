@@ -6,12 +6,19 @@ public class HashTables {
     protected static int sizeofSubStrings;
     protected LinkedList<Object>[] hashTable;
 
+    /**
+     * Creates an empty hash table.
+     */
     public void setHashTable() {
         for (int index = 0; index <= sizeofSubStrings; index++) {
             this.hashTable[index] = new LinkedList<>();
         }
     }
 
+    /**
+     * Prints out the KMer Distribution.
+     * @param kNum
+     */
     public void printKMerDistribution(int kNum) {
 
         int countOcc = 1;

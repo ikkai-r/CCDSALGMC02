@@ -13,13 +13,18 @@ public class HashTableCityH extends HashTables implements HashTable {
         super.setHashTable();
     }
 
+    /**
+     * Gets how many bytes a certain string has.
+     * @param s     string to be observed
+     * @return      bytes of the string s.
+     */
     public static byte[] getSBytes(String s) {
         return s.getBytes();
     }
 
     //hashing function
     public static int getHashIndex(String substring) {
-        return Math.floorMod(CityHash.cityHash64(getSBytes(substring), 0,substring.length()), HashTables.sizeofSubStrings+1);
+        return Math.floorMod(CityHash.cityHash64(getSBytes(substring), 0,substring.length()), hashts.HashTables.sizeofSubStrings+1);
     }
 
     public void collisionResolution(String keySubstring) {
@@ -39,11 +44,20 @@ public class HashTableCityH extends HashTables implements HashTable {
         return needCR;
     }
 
+    /**
+     * Inserts the substring and its value in the list at the corresponding hashed index.
+     * @param keySubstring      substring to be added.
+     */
     public void addElement(String keySubstring) {
         super.hashTable[getHashIndex(keySubstring)].add(keySubstring);
         super.hashTable[getHashIndex(keySubstring)].add(1);
     }
 
+    /**
+     * Returns if there is no elements present in the list at the corresponding hashed index.
+     * @param keySubstring      substring to be searched
+     * @return                  returns false if substring is not present in the hash table.
+     */
     public boolean searchElement(String keySubstring) {
         return !super.hashTable[getHashIndex(keySubstring)].isEmpty();
     }
@@ -59,6 +73,10 @@ public class HashTableCityH extends HashTables implements HashTable {
         }
     }
 
+    /**
+     * Prints KMer Distribution along as its collision frequency.
+     * @param kNum      KNumber
+     */
     public void printKMerDistribution(int kNum) {
         super.printKMerDistribution(kNum);
         System.out.println("\nCollision frequency for CityHash: " + collFreq);

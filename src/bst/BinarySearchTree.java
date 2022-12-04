@@ -14,10 +14,19 @@ public class BinarySearchTree {
     destroy() – For languages without automatic garbage collection, this function will free up the memory space. The BST will become empty after calling destroy().
     * */
 
+    /**
+     * Produces an empty BST
+     */
     public void create() {
         this.root = null;
     }
 
+    /**
+     * Checks if key is present in the BST. Used with the search() function.
+     * @param key       substring to be searched.
+     * @return          true, if present in BST.
+     *                  false, if not present in BST.
+     */
     public boolean searchCall(String key) {
         return search(root, key);
     }
@@ -35,6 +44,14 @@ public class BinarySearchTree {
 
         return false;
     }
+
+    /**
+     * Returns the node wherein the key is present.
+     * @param current       current node being used.
+     * @param key           substring being searched.
+     * @return              the node where the key resides in.
+     *                      if not present, returns null.
+     */
     public Node getSearchNode(Node current, String key) {
         if (current == null) {
             return null;
@@ -48,11 +65,20 @@ public class BinarySearchTree {
 
         return null;
     }
+
+    /**
+     * Updates the record of the node where the key resides in.
+     * @param key       substring being searched.
+     */
     public void update(String key) {
         Node current = getSearchNode(this.root, key);
         current.setRecord(current.getRecord()+1);
     }
 
+    /**
+     * Adds a new node in the BST. used with the insert() function.
+     * @param key       substring to be inserted in the BST.
+     */
     public void insertCall(String key) {
         root = insert(root, key);
     }
@@ -80,10 +106,17 @@ public class BinarySearchTree {
 
     }
 
+    /**
+     * Automatic garbage collection.
+     */
     public void destroy() {
         this.root = null;
     }
 
+    /**
+     * Prints out the KMer Distributions in Preorder Traversal. Used with the preorder() function.
+     * @param kNum
+     */
     public void printKMerDistribution(int kNum) {
         System.out.println(kNum + "-mer\t no. of occurrences");
         preorder(root);
