@@ -56,9 +56,6 @@ public class HashTableMurm extends HashTables implements HashTable {
 
     public void printKMerDistribution(int kNum) {
         super.printKMerDistribution(kNum);
-//        for (int index = 0; index < sizeofSubStrings; index++) {
-//            System.out.println(super.hashTable[index]);
-//        }
         System.out.println("\nCollision frequency for MurmurHash2: " + collFreq);
     }
 
