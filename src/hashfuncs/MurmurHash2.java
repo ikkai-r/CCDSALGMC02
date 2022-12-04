@@ -13,6 +13,7 @@
  * @author Viliam Holub
  * @version 1.0.2
  *
+ *
  */
 package hashfuncs;
 

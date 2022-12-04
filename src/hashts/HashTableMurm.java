@@ -14,7 +14,7 @@ public class HashTableMurm extends HashTables implements HashTable {
     }
 
     public static int getHashIndex(String substring) {
-        return Math.floorMod(MurmurHash2.hash32(substring), HashTables.sizeofSubStrings);
+        return Math.floorMod(MurmurHash2.hash64(substring), HashTables.sizeofSubStrings);
     }
 
     public void collisionResolution(String keySubstring) {
