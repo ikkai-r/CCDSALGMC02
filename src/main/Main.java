@@ -41,7 +41,7 @@ public class Main {
                 FileReader fileReader= new FileReader("generatedString.txt");
                 fileReader.read(dnaChars,0, size);
                 fileReader.close();
-                System.out.println(dnaChars);
+                //System.out.println(dnaChars);
                 dnaString = String.valueOf(dnaChars);
                 System.out.println("Input size of substrings for k-mer distribution:");
                 sizeOfSubstrings = input.nextInt();
@@ -75,7 +75,7 @@ public class Main {
                 PrintStream output = new PrintStream("generatedString.txt");
                 PrintStream console = System.out;
                 System.setOut(output);
-                System.out.println(dnaString);
+                System.out.print(dnaString);
                 System.setOut(console);
                 System.out.println("Input size of substrings for k-mer distribution:");
                 sizeOfSubstrings = input.nextInt();
