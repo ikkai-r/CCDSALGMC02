@@ -4,6 +4,10 @@ import bst.BinarySearchTree;
 import hashts.HashTableMurm;
 import hashts.HashTableCityH;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
 public class DNASequence {
     private String dnaString;
     private int sizeOfSubstrings;
@@ -24,7 +28,7 @@ public class DNASequence {
      * finding their frequencies,
      * and finding their collision frequencies
      */
-    public void separateDNASequence() {
+    public void separateDNASequence() throws FileNotFoundException {
 
         String dnaStringHT = dnaString;
         String dnaStringBST = dnaString;
@@ -110,28 +114,42 @@ public class DNASequence {
     /**
      * Prints the KMer Distribution of the Hash tables (using CityHash and MurMurHash2) and BST
      */
-    public void printComputedKMerDist() {
-
+    public void printComputedKMerDist() throws FileNotFoundException {
+        double timeStart = 0.0;
+        double timeFinish = 0.0;
         //for hashtable
         //print first implementation
+        PrintStream output = new PrintStream("CITYHASH.txt");
+        System.setOut(output);
         System.out.println("=======================================");
         System.out.println("HASHTABLE: USING CITYHASH");
         System.out.println("=======================================");
+        timeStart = System.currentTimeMillis();
         htHC.printKMerDistribution(sizeOfSubstrings);
-
+        timeFinish = System.currentTimeMillis();
+        System.out.printf("RUNNING TIME OF CITYHASH: %.2f ms", timeFinish-timeStart);
         //print second implementation
         System.out.println();
+        output = new PrintStream("MURMURHASH2.txt");
+        System.setOut(output);
         System.out.println("=======================================");
         System.out.println("HASHTABLE: USING MURMURHASH2");
         System.out.println("=======================================");
+        timeStart = System.currentTimeMillis();
         htHF.printKMerDistribution(sizeOfSubstrings);
-
+        timeFinish = System.currentTimeMillis();
+        System.out.printf("RUNNING TIME OF MURMURHASH2: %.2f ms", timeFinish-timeStart);
         //print bst
         System.out.println();
+        output = new PrintStream("BST.txt");
+        System.setOut(output);
         System.out.println("=======================================");
         System.out.println("BINARY SEARCH TREE");
         System.out.println("=======================================");
+        timeStart = System.currentTimeMillis();
         bst.printKMerDistribution(sizeOfSubstrings);
+        timeFinish = System.currentTimeMillis();
+        System.out.printf("RUNNING TIME OF BST: %.2f ms", timeFinish-timeStart);
 
     }
 
