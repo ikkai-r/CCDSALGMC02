@@ -56,7 +56,7 @@ public class Main {
             answer = input.nextLine();
             while (answer.compareToIgnoreCase("y") != 0 && answer.compareToIgnoreCase("n") != 0 ){
                 System.out.println("Invalid input please try again.\nAre you using a previously generated string?(Y/N):");
-                answer = String.valueOf(input);
+                answer = input.nextLine();
             }
             if (answer.compareToIgnoreCase("y") == 0){
                 dnaString = "taccaccaccatag";
@@ -79,6 +79,7 @@ public class Main {
                 System.setOut(console);
                 System.out.println("Input size of substrings for k-mer distribution:");
                 sizeOfSubstrings = input.nextInt();
+                input.close();
             }
             dnaSequence = new DNASequence(dnaString, sizeOfSubstrings);
             dnaSequence.separateDNASequence();

@@ -120,6 +120,7 @@ public class DNASequence {
         //for hashtable
         //print first implementation
         PrintStream output = new PrintStream("CITYHASH.txt");
+        PrintStream console = System.out;
         System.setOut(output);
         System.out.println("=======================================");
         System.out.println("HASHTABLE: USING CITYHASH");
@@ -150,6 +151,7 @@ public class DNASequence {
         bst.printKMerDistribution(sizeOfSubstrings);
         timeFinish = System.currentTimeMillis();
         System.out.printf("RUNNING TIME OF BST: %.2f ms", timeFinish-timeStart);
+        System.setOut(console);
 
     }
 
